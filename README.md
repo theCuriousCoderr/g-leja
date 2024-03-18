@@ -1,1 +1,3 @@
 Loading...
+
+![Landing Page](img/landing_page.jpg)
