@@ -1,0 +1,90 @@
+/* Apply styles to the body element */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply styles to all elements (*) in the root */
+* {
+    box-sizing: border-box;
+}
+
+/* Additional styling for specific elements can be added here */
+
+/* Example: Apply a default margin and padding to all headings */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for header and navigation */
+header {
+    color: rgb(102, 42, 8); /* Header text color */
+    position: fixed; /* Set the position to fixed */
+    width: 100%; /* Make the navbar span the entire width */
+    z-index: 1000; /* Set a high z-index to ensure it's on top of other content */
+}
+
+.navbar-brand img {
+    max-width: 100px; /* Set the maximum width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav {
+    background-color: transparent !important; /* Make the navbar transparent */
+}
+
+.navbar-nav .nav-link {
+    color: orange !important; /* Navigation link text color */
+    font-family: 'Playfair Display', serif; /* Set font to Playfair Display */
+    transition: text-decoration 0.3s ease; /* Add transition effect for smooth animation */
+    font-size: 24px; /* Set the font size of navigation links */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline the navigation link on hover */
+    background-color: transparent; /* Keep the background color transparent */
+}
+
+.hero-section {
+    background-image: url(/img/signup/signup-2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Set the height to half of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align content to the bottom */
+    position: relative; /* Set position to relative for absolute positioning of corners */
+    overflow: hidden; /* Hide overflowing rounded corners */
+    border-radius: 0 0 50px 50px; /* Apply rounding to bottom corners */
+}
+
+/* Add rounded corners at the bottom */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.overlay-flexbox {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Set the height of the flexbox to 50% of the hero section height */
+}
+
+.overlay-flexbox img {
+    max-width: 50%; /* Ensure the image does not exceed the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add border-radius to the image */
+}
