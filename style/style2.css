@@ -51,12 +51,12 @@ nav a:hover {
     background-image: url(/img/signup/signup-2.jpg);
     background-size: cover;
     background-position: center;
-    height: 80vh; /* Set the height to half of the viewport height */
+    height: 80vh; /* Set the height to 80% of the viewport height */
     display: flex;
     justify-content: center;
     align-items: flex-end; /* Align content to the bottom */
     position: relative; /* Set position to relative for absolute positioning of corners */
-    overflow: hidden; /* Hide overflowing rounded corners */
+    overflow: visible; /* Ensure that overflowing content is visible */
     border-radius: 0 0 50px 50px; /* Apply rounding to bottom corners */
 }
 
@@ -73,15 +73,16 @@ nav a:hover {
 
 .overlay-flexbox {
     position: absolute;
-    bottom: 0;
+    bottom: -60%; /* Adjust this value as needed to control how much of the flexbox goes below the hero section */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%; /* Set the height of the flexbox to 50% of the hero section height */
+    width: 70%;
+    height: 125%; /* Increase the height to cover the desired portion below the hero section */
 }
+
 
 .overlay-flexbox img {
     max-width: 50%; /* Ensure the image does not exceed the width of its container */
