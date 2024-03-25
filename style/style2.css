@@ -81,11 +81,41 @@ nav a:hover {
     align-items: center;
     width: 70%;
     height: 125%; /* Increase the height to cover the desired portion below the hero section */
+    overflow: hidden; /* Hide overflowing content */
+    z-index: 1; /* Ensure flexbox appears above the image */
 }
-
 
 .overlay-flexbox img {
     max-width: 50%; /* Ensure the image does not exceed the width of its container */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Add border-radius to the image */
+}
+
+.text {
+    position: absolute; /* Position text absolutely within the flexbox */
+    bottom: 35%; /* Adjust vertical position of the text */
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-50%); /* Center the text horizontally */
+    text-align: center; /* Center align text */
+    z-index: 2; /* Ensure text appears above the image */
+}
+
+.text span {
+    margin: 0px; /* Remove spacing around text elements */
+    display: block; /* Display text elements as block */
+    color: #ff750f; /* Set text color to match other colors */
+    line-height: 1.0; /* Adjust line height to reduce space between text */
+}
+
+
+.text .small {
+    font-size: 50px; /* Increase font size for smaller text */
+}
+
+.text .big {
+    font-size: 85px; /* Increase font size for medium-sized text */
+}
+
+.text .biggest {
+    font-size: 100px; /* Increase font size for largest text */
 }
