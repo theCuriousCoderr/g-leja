@@ -6,6 +6,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 .l-h1{
     background-color: #ff750f; 
     padding: 10px;
@@ -98,6 +99,26 @@ button:hover {
 
 footer{
     margin-left: 10px;
+    color: #ff750f;
+}
+
+.shape {
+    width: 200px;
+    height: 200px;
+    fill: #FF750F;
+    position: absolute;
+}
+
+.shape-top-right {
+    top: 0;
+    right: 0;
+}
+
+.shape-middle-right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Responsive Styles */
