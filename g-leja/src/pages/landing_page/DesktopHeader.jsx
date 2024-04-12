@@ -11,7 +11,7 @@ function DesktopHeader() {
             <div className=' bg-red-80 flex items-center justify-between'>
                 <div className='flex items-center gap-28'>
                     <div className='w-16 h-8 bg-orange-400'></div>
-                    <div className='relative flex gap-2 items-center px-2'>
+                    <div className='flex gap-2 items-center px-2'>
                         {headerTabs.map((tabs, index) => <DesktopHeaderTab idx={index} keyword={tabs.keyword} options={tabs.options} />)}
                     </div>
                 </div>
