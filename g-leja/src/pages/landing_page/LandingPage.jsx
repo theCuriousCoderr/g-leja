@@ -1,6 +1,7 @@
 import React from "react";
 import DesktopHeader from "./DesktopHeader";
-// import bg_image from '../../assets/images/landing_page/grainy_background.jpg'
+import ButtonLoadingState from "../../components/ButtonLoadingState";
+import PageLoadingState from "../../components/PageLoadingState";
 
 function LandingPage() {
   return (
@@ -11,7 +12,10 @@ function LandingPage() {
       </div>
 
       {/* first full screen */}
-      <div className="h-screen w-full bg-red-40"></div>
+      <div className="h-screen w-full bg-red-40 flex items-center justify-center">
+        <PageLoadingState width="w-1" height="h-4" />
+        <ButtonLoadingState/>
+      </div>
       {/* <div className='h-screen w-full bg-blue-40'>  </div>
         <div className='h-screen w-full bg-yellow-40'>  </div> */}
     </div>

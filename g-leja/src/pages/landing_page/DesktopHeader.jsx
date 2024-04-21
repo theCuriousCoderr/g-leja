@@ -5,14 +5,13 @@ import headerTabs from '../../utils/headerTabs'
 function DesktopHeader() {
     const [step, setStep] = useState("left-[4px]")
 
-
     return (
-        <div className='w-full bg-red-40 px-16 py-8'>
-            <div className=' bg-red-80 flex items-center justify-between'>
+        <div className='w-full bg-red-40 px-16 py-5'>
+            <div className=' bg-stone-50 shadow-sm shadow-stone-300 rounded-lg flex items-center justify-between p-3'>
                 <div className='flex items-center gap-28'>
                     <div className='w-16 h-8 bg-orange-400'></div>
                     <div className='flex gap-2 items-center px-2'>
-                        {headerTabs.map((tabs, index) => <DesktopHeaderTab idx={index} keyword={tabs.keyword} options={tabs.options} />)}
+                        {headerTabs.map((tabs, index) => <DesktopHeaderTab key={tabs.keyword} idx={index} keyword={tabs.keyword} options={tabs.options} />)}
                     </div>
                 </div>
                 <div className='flex items-center gap-5'>
