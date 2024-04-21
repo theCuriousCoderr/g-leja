@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import DesktopHeaderTab from '../../components/DesktopHeaderTab'
 import headerTabs from '../../utils/headerTabs'
+import { useNavigate } from 'react-router-dom'
 
 function DesktopHeader() {
     const [step, setStep] = useState("left-[4px]")
+    const navigate = useNavigate()
 
     return (
         <div className='w-full bg-red-40 px-16 py-5'>
@@ -16,10 +18,10 @@ function DesktopHeader() {
                 </div>
                 <div className='flex items-center gap-5'>
                     <div>
-                        <button className='px-5 py-3 text-gleja-300 text-base font-normal font-inter hover:bg-orange-200 rounded-md'>Log In</button>
+                        <button onClick={() => navigate("/log-in")} className='px-5 py-3 text-gleja-300 text-base font-normal font-inter hover:bg-orange-200 rounded-md'>Log In</button>
                     </div>
                     <div>
-                        <button className='px-5 py-3 bg-gleja-300 hover:bg-orange-200 text-white hover:text-gleja-300 text-base font-normal font-inter rounded-md'>Get Started</button>
+                        <button onClick={() => navigate("/sign-up")} className='px-5 py-3 bg-gleja-300 hover:bg-orange-200 text-white hover:text-gleja-300 text-base font-normal font-inter rounded-md'>Get Started</button>
                     </div>
                 </div>
             </div>

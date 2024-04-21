@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .dropdown {
-    animation: dropdown .7s ease-out;
+    animation: dropdown .5s ease-out;
 }
 
 @keyframes dropdown{

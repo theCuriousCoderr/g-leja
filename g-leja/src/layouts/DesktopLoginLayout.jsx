@@ -1,15 +1,41 @@
 import React from "react";
 import wavy from "../assets/images/login_page/wavy2.jpg";
 import GlassTilesGroup from "../components/GlassTilesGroup";
-import SignUpForm from "../components/SignUpForm";
-// SignUpForm
+import Logo from "../components/Logo";
+import { Email, GitHub, LinkedIn, X } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
-function DesktopLoginLayout({form}) {
+function DesktopLoginLayout({ formType }) {
+  const navigate = useNavigate();
   return (
-    <div className="h-screen w-full flex items-center justify-center p-5 ">
+    <div className="h-screen w-full flex items-center justify-center p-5 bg-orange-500 ">
       <div className="h-full bg-gray-800 rounded-3xl flex gap-10 p-3">
-        <div className=" h-full">
-          {form}
+        <div className="relative h-full p-5">
+          <div>
+            <Logo />
+          </div>
+          {formType}
+          <div className="absolute w-full bottom-5 ">
+            <div className="flex gap-5 items-center justify-center">
+              <div className="text-orange-500">
+                <X sx={{ fontSize: 20 }} />
+              </div>
+              <div className="text-orange-500">
+                <LinkedIn />
+              </div>
+              <div className="text-orange-500">
+                <Email />
+              </div>
+            </div>
+            <div className="flex gap-10 justify-center text-xs mt-3 ">
+              <div className="text-orange-500">
+                <button>Terms & Conditions</button>
+              </div>
+              <div className="text-orange-500">
+                <button>Privacy Policy</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="relative h-full aspect-square bg-red-40 rounded-2xl flex justify-center">
           <div className="absolute w-full h-full ">
@@ -21,8 +47,9 @@ function DesktopLoginLayout({form}) {
             </div>
             <div className="">
               <div className="relative w-24 h-10 mx-auto bg-transparent bg-opacity-1">
-                <div className="absolute z-10 backdrop-blur-sm w-full h-full bg-orange-400 bg-opacity-10"></div>
-                <p className="relative z-10 text-xs text-center p-1 rounded-full bg-opacity-10 font-inter">WHAT'S NEW</p>
+                <p className="relative z-10 text-xs text-center p-1 rounded-full font-inter">
+                  WHAT'S NEW
+                </p>
               </div>
             </div>
           </div>
