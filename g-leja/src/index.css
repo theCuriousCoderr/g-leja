@@ -96,3 +96,21 @@
       transform: rotate(360deg);
     }
   }
+
+  .text-stroke {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(196, 178, 148);
+  
+     color:transparent;
+  }
+
+  .load{
+    animation: load 1s ease-in-out infinite;
+  }
+
+  @keyframes load{
+    to {
+      transform: translateX(5000%)
+    
+    }
+  }

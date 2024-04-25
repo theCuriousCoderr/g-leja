@@ -9,7 +9,8 @@ export default {
     extend: {
       fontFamily: {
         inter:  ["Inter", "sans-serif" ],
-        roboto: [ "Roboto", "sans-serif" ]
+        roboto: [ "Roboto", "sans-serif" ],
+        poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
         'grainy': "url('./src/assets/images/landing_page/grainy.jpg')",
