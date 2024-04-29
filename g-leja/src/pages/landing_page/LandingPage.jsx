@@ -7,6 +7,7 @@ import PageLoadingState from "../../components/PageLoadingState";
 import { NavLink, useNavigate } from "react-router-dom";
 import basicFeatures from "../../utils/basicFeatures";
 import premiumFeatures from "../../utils/premiumFeatures";
+import { CheckCircle, CheckCircleOutline } from "@mui/icons-material";
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -69,7 +70,9 @@ function LandingPage() {
               {basicFeatures.map(features => {
                 return (
                   <div key={features} className="flex items-center gap-2">
-                    <div className="size-3 rounded-full bg-black"></div>
+                     <div className="size-3 rounded-full flex items-center justify-center">
+                      <CheckCircle sx={{fontSize:15}} />
+                    </div>
                     <p className="text-xs">{features}</p>
                     </div>
                 )
@@ -95,7 +98,9 @@ function LandingPage() {
               {premiumFeatures.map(features => {
                 return (
                   <div key={features} className="flex items-center gap-2">
-                    <div className="size-3 rounded-full bg-black"></div>
+                    <div className="size-3 rounded-full flex items-center justify-center">
+                      <CheckCircle sx={{fontSize:15}} />
+                    </div>
                     <p className="text-xs">{features}</p>
                     </div>
                 )
