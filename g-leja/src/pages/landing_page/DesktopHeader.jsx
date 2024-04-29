@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import DesktopHeaderTab from '../../components/DesktopHeaderTab'
 import headerTabs from '../../utils/headerTabs'
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import Logo from '../../components/Logo'
 
 function DesktopHeader() {
@@ -10,7 +10,7 @@ function DesktopHeader() {
 
     return (
         <div className='w-full px-16 py-5 '>
-            <div className=' bg-stone-50 shadow-sm shadow-stone-300 border rounded-lg flex items-center justify-between p-3'>
+            <div className=' bg-stone-50 shadow-sm shadow-stone-300 border rounded-lg flex items-center justify-between px-3 py-5'>
                 <div className='flex items-center gap-28'>
                     <div className='w-16 h-8 flex items-center justify-center'>
                         <Logo />
@@ -21,10 +21,10 @@ function DesktopHeader() {
                 </div>
                 <div className='flex items-center gap-5'>
                     <div>
-                        <button onClick={() => navigate("/log-in")} className='px-5 py-3 text-gleja-300 text-base font-normal font-inter border border-transparent hover:border-orange-500 rounded-md'>Log In</button>
+                        <NavLink to="/log-in" className='px-5 py-3 text-gleja-300 text-base font-normal font-inter border border-transparent hover:border-orange-500 rounded-md'>Log In</NavLink>
                     </div>
                     <div>
-                        <button onClick={() => navigate("/sign-up")} className='px-5 py-3 bg-gleja-300 hover:bg-orange-400 text-white text-base font-normal font-inter rounded-md'>Get Started</button>
+                        <NavLink to="/sign-up" className='px-5 py-3 bg-gleja-300 hover:bg-orange-400 text-white text-base font-normal font-inter rounded-md'>Get Started</NavLink>
                     </div>
                 </div>
             </div>

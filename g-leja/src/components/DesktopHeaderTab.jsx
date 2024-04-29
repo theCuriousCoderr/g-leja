@@ -3,8 +3,6 @@ import React, { useState } from "react";
 function DesktopHeaderTab({ idx, keyword, options }) {
   return (
     <button
-      onClick={() => tabHover(idx, keyword)}
-      onMouseEnter={() => tabHover(idx, keyword)}
       className="relative group cursor-pointer px-2 py-1"
     >
       <p className="group-hover:text-gleja-100 text-left font-medium font-inter bg-red-40">
