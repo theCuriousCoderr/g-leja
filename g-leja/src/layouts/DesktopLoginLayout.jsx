@@ -72,6 +72,7 @@ function DesktopLoginLayout({ formType }) {
           <div className="relative size-full text-white z-10">
             <div className="relative w-1/2 aspect-square mx-auto bg-white rounded-xl mt-20">
               <GlassTilesGroup />
+              {/* <div id="skeleton" className="absolute z-10 h-full w-[2%] opacity-30 bg-gradient-to-r from-gray-600 to-gray-800 shadow-xl shadow-gray-800 load"></div> */}
               <div className="size-full flex items-center justify-center">
                {slide === 1 && <img
                   src={slide1}
