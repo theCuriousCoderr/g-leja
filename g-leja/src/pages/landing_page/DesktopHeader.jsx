@@ -4,13 +4,13 @@ import headerTabs from '../../utils/headerTabs'
 import { NavLink, useNavigate } from 'react-router-dom'
 import Logo from '../../components/Logo'
 
-function DesktopHeader() {
+function DesktopHeader({headerColor}) {
     const [step, setStep] = useState("left-[4px]")
     const navigate = useNavigate()
 
     return (
         <div className='w-full px-16 py-5 '>
-            <div className=' bg-stone-50 shadow-sm shadow-stone-300 border rounded-lg flex items-center justify-between px-3 py-5'>
+            <div className={`${headerColor === "none" ? "bg-transparent border-transparent" : "bg-stone-50 shadow-sm shadow-stone-300 " } border rounded-lg flex items-center justify-between px-3 py-5`}>
                 <div className='flex items-center gap-28'>
                     <div className='w-16 h-8 flex items-center justify-center'>
                         <Logo />

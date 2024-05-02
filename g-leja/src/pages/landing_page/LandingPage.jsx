@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DesktopHeader from "./DesktopHeader";
 import analytics from "../../assets/images/landing_page/analytics.png";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -14,15 +14,32 @@ import wellfx_logo from "../../assets/images/landing_page/wellfx_logo.jpg";
 
 function LandingPage() {
   const navigate = useNavigate();
+  const [scrollHeight, setScrollHeight] = useState("")
+  const [headerColor, setHeaderColor] = useState("none")
+
+  function getHeight(e) {
+    let container = document.getElementById("container");
+    let height = container.getBoundingClientRect().top
+    if (height < scrollHeight) {
+      setHeaderColor("fill")
+    } else {
+      setHeaderColor("none")
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    let container = document.getElementById("container");
+    setScrollHeight(container.getBoundingClientRect().top)
+  })
   return (
     // designing desktop view first
-    <div className="relative h-screen w-full overflow-scroll bg-grainy bg-fixed">
+    <div onScroll={getHeight} className="relative h-screen w-full overflow-scroll bg-grainy bg-fixed">
       <div className="sticky z-20 top-0 bg-transparent bg-opacity-50 backdrop-blur-md">
-        <DesktopHeader />
+        <DesktopHeader headerColor={headerColor} />
       </div>
 
       {/* first full screen */}
-      <div>
+      <div  id="container">
         <div className="relative z-10 w-full h-screen bg-red-40 -mt-20 flex items-center justify-between px-16">
           <div className="absolute -z-10 bg-red-30 top-0 left-0 right-0 bottom-0 flex items-center justify-center">
             <p className="text-[15rem] tracking-widest text-stroke animate-pulse">
@@ -154,12 +171,12 @@ function LandingPage() {
           <div className="px-16 flex flex-wrap justify-between gap-5 w-full">
             {howItWorks.map((reasons) => {
               return (
-                <button className="relative group w-[23%] aspect-square outline-orange-500 bg-gradient-to-r even:from-pink-500 even:to-purple-500 odd:from-blue-500 odd:to-purple-500 rounded-xl overflow-hidden">
+                <button key={reasons.keyword} className="relative group w-[23%] aspect-square outline-orange-500 bg-gradient-to-r from-orange-500 to-orange-700 rounded-xl overflow-hidden">
                   <div className="absolute size-full -right-32 -top-32 animate-ping flex items-center justify-center overflow-hidden">
-                    <div className="absolute size-[5rem] rounded-full border border-slate-400"></div>
-                    <div className="absolute size-[10rem] rounded-full border border-slate-400"></div>
-                    <div className="absolute size-[15rem] rounded-full border border-slate-400"></div>
-                    <div className="absolute size-[20rem] rounded-full border border-slate-400"></div>
+                    <div className="absolute size-[5rem] rounded-full border border-orange-700"></div>
+                    <div className="absolute size-[10rem] rounded-full border border-orange-700"></div>
+                    <div className="absolute size-[15rem] rounded-full border border-orange-700"></div>
+                    <div className="absolute size-[20rem] rounded-full border border-orange-700"></div>
                   </div>
                   <div className="absolute z-10 bottom-4 left-4 group-hover:hidden group-focus-within:hidden transiton-all font-poppins text-white font-medium">
                     {reasons.keyword}
@@ -194,16 +211,16 @@ function LandingPage() {
           <h2 className="text-3xl font-bold font-poppins text-center text-white mt-20">
             Featured client stories
           </h2>
-          <div className="flex items-center gap-10 overflow-x-scroll w-[90%] mx-auto rounded-xl mt-5">
+          <div className="flex gap-10 overflow-x-scroll w-[90%] mx-auto rounded-xl mt-5">
             {clientStories.map((story) => {
               return (
-                <div className="relative z-10 min-w-80 h-full p-5 pb-20 rounded-xl bg-white bg-opacity-10">
+                <div key={story.name} className="relative z-10 min-w-80 p-5 pb-20 rounded-xl bg-white bg-opacity-10">
                   <div className="absolute -z-10 bottom-0 rounded-b-xl left-0 w-full h-10 bg-orange-500"></div>
-                  <p className="text-orange-100">
+                  <div className="text-orange-100">
                     <p className="text-[6rem] h-10 font-black -ml-2">"</p>
                     <br />
                     {story.story}"
-                  </p>
+                  </div>
                   <div className="absolute bottom-5 flex gap-2 items-center justify-start mt-2">
                     <div className="size-10 rounded-full p-[1px] bg-orange-900">
                       <img
