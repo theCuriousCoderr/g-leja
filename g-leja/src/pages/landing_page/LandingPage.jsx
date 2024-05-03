@@ -34,13 +34,16 @@ function LandingPage() {
   return (
     // designing desktop view first
     <div onScroll={getHeight} className="relative h-screen w-full overflow-scroll bg-grainy bg-fixed">
-      <div className="sticky z-20 top-0 bg-transparent bg-opacity-50 backdrop-blur-md">
+      <div className="sticky z-40 top-0 bg-transparent bg-opacity-50 backdrop-blur-md">
         <DesktopHeader headerColor={headerColor} />
       </div>
 
       {/* first full screen */}
       <div  id="container">
         <div className="relative z-10 w-full h-screen bg-red-40 -mt-20 flex items-center justify-between px-16">
+          {/* <div className="absolute left-0 size-full bg-red-400 z-20">
+            <h1 className="text-5xl text-center pt-20">BEGINNING</h1>
+          </div> */}
           <div className="absolute -z-10 bg-red-30 top-0 left-0 right-0 bottom-0 flex items-center justify-center">
             <p className="text-[15rem] tracking-widest text-stroke animate-pulse">
               G - Leja
@@ -82,7 +85,8 @@ function LandingPage() {
           </div>
         </div>
 
-        <div className="space-y-16 mt- bg-red-30 w-full h-screen flex flex-col items-center justify-center">
+        <div className="relative space-y-16 mt- bg-red-30 w-full h-screen flex flex-col items-center justify-center">
+        {/* <div className="absolute size-full bg-yellow-400 z-20"></div> */}
           <h2 className="text-5xl font-bold font-poppins text-center text-orange-500 ">
             Pick Your Preferred Plan
           </h2>
@@ -211,10 +215,10 @@ function LandingPage() {
           <h2 className="text-3xl font-bold font-poppins text-center text-white mt-20">
             Featured client stories
           </h2>
-          <div className="flex gap-10 overflow-x-scroll w-[90%] mx-auto rounded-xl mt-5">
+          <div className="flex gap-10 overflow-x-scroll w-[90%] mx-auto rounded-xl mt-5 p-5">
             {clientStories.map((story) => {
               return (
-                <div key={story.name} className="relative z-10 min-w-80 p-5 pb-20 rounded-xl bg-white bg-opacity-10">
+                <div key={story.name} className="relative z-10 min-w-80 p-5 pb-20 rounded-xl bg-orange-500 raise">
                   <div className="absolute -z-10 bottom-0 rounded-b-xl left-0 w-full h-10 bg-orange-500"></div>
                   <div className="text-orange-100">
                     <p className="text-[6rem] h-10 font-black -ml-2">"</p>
