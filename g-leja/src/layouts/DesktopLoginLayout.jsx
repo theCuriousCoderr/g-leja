@@ -30,14 +30,14 @@ function DesktopLoginLayout({ formType }) {
    
   }
   return (
-    <div className="h-screen w-full flex items-center justify-center p-5 bg-orange-500 ">
-      <div className="h-full bg-gray-800 rounded-3xl flex gap-10 p-3">
-        <div className="relative h-full p-5">
+    <div className="h-screen w-full flex items-center justify-center p-5 xs:max-md:p-0 xs:max-md:pr-2 xs:max-md:py-2 bg-orange-500 ">
+      <div className="h-full xs:max-md:w-full bg-gray-800 rounded-3xl xs:max-md:rounded-r-xl xs:max-md:rounded-l-none flex gap-10 p-3">
+        <div className="relative xs:max-md:w-full h-full p-5 xs:max-md:p-2">
           <div>
             <Logo />
           </div>
           {formType}
-          <div className="absolute w-full bottom-5 ">
+          <div className="absolute w-full xs:max-md:left-0 bottom-5 ">
             <div className="flex gap-5 items-center justify-center">
               <NavLink className="text-orange-500">
                 <X sx={{ fontSize: 20 }} />
@@ -59,7 +59,7 @@ function DesktopLoginLayout({ formType }) {
             </div>
           </div>
         </div>
-        <div className="relative h-full aspect-square rounded-2xl flex justify-center">
+        <div className="xs:max-md:hidden relative h-full aspect-square rounded-2xl flex justify-center">
           {/*black image cover */}
           <div className="absolute z-10 w-full h-full ">
             <div id="skeleton" className="absolute -z-10 h-full w-[2%] opacity-30 bg-gradient-to-r from-gray-600 to-gray-800 shadow-xl shadow-gray-800 load"></div>
@@ -94,7 +94,7 @@ function DesktopLoginLayout({ formType }) {
             <button disabled={slide === 1} onClick={() => slideEl("prev")} className="text-white disabled:text-slate-950">
               <ArrowBack sx={{ fontSize: 20 }} />
             </button>
-            {[1,2,3].map(id => <div className={`w-8 h-1 ${slide === id ? "bg-white" : "bg-opacity-20 backdrop-blur-md bg-white" }  rounded-full`}></div> ) }
+            {[1,2,3].map(id => <div key={id} className={`w-8 h-1 ${slide === id ? "bg-white" : "bg-opacity-20 backdrop-blur-md bg-white" }  rounded-full`}></div> ) }
             <button disabled={slide === 3} onClick={() => slideEl("next")} className="text-white disabled:text-slate-950">
               <ArrowForward sx={{ fontSize: 20 }} />
             </button>

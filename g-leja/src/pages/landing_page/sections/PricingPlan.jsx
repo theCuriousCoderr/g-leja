@@ -5,13 +5,13 @@ import premiumFeatures from '../../../utils/premiumFeatures';
 
 function PricingPlan() {
   return (
-    <div className="relative space-y-16 mt- bg-red-30 w-full h-screen flex flex-col items-center justify-center">
+    <div className="relative space-y-16 bg-red-30 w-full h-screen xs:max-md:h-auto xs:max-md:mt-20 flex flex-col items-center justify-center">
           {/* <div className="absolute size-full bg-yellow-400 z-20"></div> */}
-          <h2 className="text-5xl font-bold font-poppins text-center text-orange-500 ">
+          <h2 className="text-5xl xs:max-md:text-3xl font-bold font-poppins text-center text-orange-500 ">
             Pick Your Preferred Plan
           </h2>
-          <div className="flex gap-10 justify-center items-center">
-            <div className="p-1 rounded-[1.25rem] bg-transparent hover:scale-105 hover:shadow-md hover:shadow-orange-500 transition-all ">
+          <div className="flex xs:max-md:flex-col gap-10 justify-center items-center">
+            <div className="p-1 rounded-[1.25rem] bg-transparent hover:scale-105 hover:shadow-md hover:shadow-orange-500 transition-all xs:max-md:w-[90%]">
               <div className="p-5 bg-transparent border-2 border-orange-300  rounded-2xl space-y-6">
                 <p className="text-xl font-semibold font-inter text-orange-500">
                   Basic
@@ -46,7 +46,7 @@ function PricingPlan() {
               </div>
             </div>
 
-            <div className="relative p-1 rounded-[1.25rem] bg-transparent hover:scale-105 hover:shadow-md hover:shadow-orange-500 transition-all ">
+            <div className="relative p-1 rounded-[1.25rem] bg-transparent hover:scale-105 hover:shadow-md hover:shadow-orange-500 transition-all xs:max-md:w-[90%]">
               <div className="absolute -top-3 z-10 w-full flex items-center justify-center">
                 <span className="px-2 py-1 text-xs h-7 bg-orange-500 text-white font-semibold rounded-md ">
                   Most Preferred

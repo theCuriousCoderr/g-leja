@@ -8,28 +8,28 @@ import wellfx_logo from "../../../assets/images/landing_page/wellfx_logo.jpg";
 function ClientStories() {
   return (
     
-    <div className="mt-40 bg-orange-500 w-full flex flex-col items-center justify-center p-10">
-    <h2 className="text-4xl font-bold font-poppins text-center text-white ">
+    <div className="mt-40 bg-orange-500 w-full flex flex-col items-center justify-center p-10 xs:max-md:p-0 xs:max-md:py-5">
+    <h2 className="text-4xl xs:max-md:text-2xl font-bold font-poppins text-center text-white ">
       G-Leja endorsed by trusted brands
     </h2>
-    <div className="flex gap-20 mt-5">
-      <div className="size-20 bg-white flex items-center justify-center rounded-xl">
+    <div className="flex gap-20 xs:max-md:gap-5 mt-5">
+      <div className="size-20 xs:max-md:size-16 bg-white flex items-center justify-center rounded-xl">
         <img src={betty_logo} />
       </div>
-      <div className="size-20 bg-white flex items-center justify-center rounded-xl">
+      <div className="size-20 xs:max-md:size-16 bg-white flex items-center justify-center rounded-xl">
         <img src={dorheeys_logo} />
       </div>
-      <div className="size-20 bg-white flex items-center justify-center rounded-xl">
+      <div className="size-20 xs:max-md:size-16 bg-white flex items-center justify-center rounded-xl">
         <img src={hj_logo} />
       </div>
-      <div className="size-20 bg-white flex items-center justify-center rounded-xl">
+      <div className="size-20 xs:max-md:size-16 bg-white flex items-center justify-center rounded-xl">
         <img src={wellfx_logo} />
       </div>
     </div>
     <h2 className="text-3xl font-bold font-poppins text-center text-white mt-20">
       Featured client stories
     </h2>
-    <div className="flex gap-10 overflow-x-scroll w-[90%] mx-auto rounded-xl mt-5 p-5">
+    <div className="flex gap-10 overflow-x-scroll w-[90%] xs:max-md:w-full mx-auto rounded-xl mt-5 p-5 xs:max-md:p-1">
         
       {clientStories.map((story) => {
         return (

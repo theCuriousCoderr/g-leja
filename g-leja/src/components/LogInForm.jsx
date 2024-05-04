@@ -16,7 +16,7 @@ function LogInForm() {
     }, 5000);
   }
   return (
-    <div className="h-ful px-5 pt-10">
+    <div className="h-ful px-5  xs:max-md:px-0 pt-10">
       <div className="space-y-10">
         <h1 className="bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500 text-transparent font-bold text-xl uppercase">
           Welcome Back !
