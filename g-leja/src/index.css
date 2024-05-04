@@ -139,3 +139,31 @@
   .raise {
     box-shadow: -3px -3px 12px 0 rgba(255, 255, 255, 0.25),  5px 5px 12px 0 rgba(0, 0, 0, 0.3) ;
   }
+
+  .footer-link-hover:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 1px;
+    background-color: red;
+    animation: load .2s ease-in;
+
+  }
+
+  @keyframes load {
+    from {
+      width: 0%;
+    }
+  }
+
+  .slide-in-right{
+    animation: slide-in-right .5s ease-out;
+  }
+
+  @keyframes slide-in-right {
+    from {
+      right: -50px;
+      opacity: 0;
+    }
+  }

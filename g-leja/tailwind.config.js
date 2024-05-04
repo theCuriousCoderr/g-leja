@@ -21,6 +21,9 @@ export default {
         "gleja-200": "#ED7014",
         "gleja-300": "#FC6A03",
         "gleja-400": "#DD571C",
+      },
+      screens: {
+        xs: "300px"
       }
     },
   },
