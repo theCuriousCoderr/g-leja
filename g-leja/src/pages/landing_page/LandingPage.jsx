@@ -35,7 +35,7 @@ function LandingPage() {
       onScroll={getHeight}
       className="relative h-screen w-full overflow-scroll bg-grainy bg-fixed"
     >
-      <div className="sticky z-40 top-0 bg-transparent bg-opacity-50 backdrop-blur-md px-6">
+      <div className="sticky z-40 top-0 bg-transparent bg-opacity-50 backdrop-blur-md px-6 ">
         {sideNav === "open" && <SideNavBar setSideNav={setSideNav} /> }
       
         <DesktopHeader headerColor={headerColor} />

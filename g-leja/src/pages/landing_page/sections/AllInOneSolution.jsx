@@ -6,11 +6,6 @@ import analytics from "../../../assets/images/landing_page/analytics.png";
 function AllInOneSolution() {
   return (
     <div className="relative z-10 w-full h-screen xs:max-md:h-auto bg-red-40 -mt-20 xs:max-md:mt-5 flex xs:max-md:flex-col items-center justify-between px-16 xs:max-md:px-5">
-      <div className="absolute -z-10 bg-red-30 top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-        <p className="text-[15rem] xs:max-md:text-3xl tracking-widest text-stroke animate-pulse">
-          G - Leja
-        </p>
-      </div>
 
       <div className="space-y-8 w-1/2 xs:max-md:w-full">
         <h1 className="font-inter font-bold text-5xl xs:max-md:text-5xl tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-500 ">

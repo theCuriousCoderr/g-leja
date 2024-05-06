@@ -63,7 +63,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className="xs:max-md:w-[48%] bg-red-40">
+          <div className="xs:max-md:w-[48%] bg-red-40 space-y-2">
             <h2 className="text-lg font-semibold font-inter text-orange-500">
               UPDATES
             </h2>
