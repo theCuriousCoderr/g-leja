@@ -29,7 +29,7 @@ function ClientStories() {
     <h2 className="text-3xl font-bold font-poppins text-center text-white mt-20">
       Featured client stories
     </h2>
-    <div className="flex gap-10 overflow-x-scroll w-[90%] xs:max-md:w-full mx-auto rounded-xl mt-5 p-5 xs:max-md:p-1">
+    <div className="flex gap-10 overflow-x-scroll w-[90%] xs:max-md:w-full mx-auto rounded-xl mt-5 p-5 xs:max-md:px-5">
         
       {clientStories.map((story) => {
         return (

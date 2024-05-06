@@ -5,7 +5,7 @@ function DesktopHeaderTab({ idx, keyword, options }) {
     <button
       className="relative group cursor-pointer px-2 py-1"
     >
-      <p className="group-hover:text-gleja-100 text-left font-medium font-inter bg-red-40 xs:max-md:text-right xs:max-md:text-white">
+      <p className="group-hover:text-gleja-100 xs:max-md:group-hover:text-black xs:max-md:uppercase text-left font-medium font-inter bg-red-40 xs:max-md:text-right xs:max-md:text-white">
         {keyword}
       </p>
       <div className="hidden dropdown transition-all xs:max-md:group-hover:hidden group-hover:block group-focus-within:block xs:max-md:group-focus-within:hidden group-active:block absolute top-5 z-10 pt-16 left-2 min-w-28 bg-transparent ">
